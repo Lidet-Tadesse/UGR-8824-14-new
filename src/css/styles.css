@@ -1,7 +1,6 @@
 body {
     font-family: "Open Sans", sans-serif;
     color: #272829;
-    
   }
   
   a {
@@ -157,8 +156,9 @@ body {
   
   .nav-menu a,
   .nav-menu a:focus {
-    display: flex;
+    display: grid;
     align-items: center;
+    justify-items: center;
     color: #45505b;
     padding: 10px 18px;
     margin-bottom: 8px;
@@ -183,7 +183,7 @@ body {
     color: #483d8b;
   }
   
-  /*@media (min-width: 992px) {
+ /* @media (min-width: 992px) {
   
     .nav-menu a,
     .nav-menu a:focus {
@@ -195,7 +195,7 @@ body {
       display: none;
       color: #fff;
     }
-  } */
+  }*/
   
   .nav-menu a:hover,
   .nav-menu .active,
@@ -265,12 +265,12 @@ body {
   #hero {
     width: 100%;
     height: 100vh;
-    
+    background: url("C:\Users\o'clock computer\Desktop\portfolio\images\roberto-nickson-TB_cvdUHUuc-unsplash.jpg") top right no-repeat;
     background-size: cover;
     position: relative;
   }
   
-  /*@media (min-width: 992px) {
+ /* @media (min-width: 992px) {
     #hero {
       padding-left: 160px;
       background: url("C:\Users\o'clock computer\Desktop\portfolio\images\roberto-nickson-TB_cvdUHUuc-unsplash.jpg") top right no-repeat;
@@ -301,6 +301,22 @@ body {
     font-size: 26px;
     font-family: "Poppins", sans-serif;
   }
+  .typed {
+    overflow: hidden; /* Hide the overflowing content */
+    animation: typing 8s steps(60, end);
+    white-space: nowrap; /* Prevent line breaks */
+    border-right: 0.15em solid; /* Add a cursor effect with a border */
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 100%;
+    }
+  }
   
   #hero p span {
     color: #483d8b;
@@ -308,30 +324,31 @@ body {
   }
   
   .social-media-icons {
-    display: flex;
+    display: grid;
     justify-content: center;
     margin-top: 200px;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    grid-gap: 10px;
   }
-    .social-media-icons i {
-      font-size: 30px; 
+  
+  .social-media-icons i {
+    font-size: 30px;
+  }
 
-  }
+  
 
   .social-media-icons a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 10px;
+    display: grid;
+    place-items: center;
     text-decoration: none;
     color: #483d8b;
-    
-    
+    size: 30px;
   }
   .social-media-icons a p {
     font-size: 20px !important;
   }
   .social-media-icons a:hover {
-    background: #4432bb;
+    background: #312292;
     color: #fff;
   
   }
@@ -414,11 +431,12 @@ body {
   .about .content ul {
     list-style: none;
     padding: 0;
+    display: grid;
+    gap: 20px;
   }
   
   .about .content ul li {
     margin-bottom: 20px;
-    display: flex;
     align-items: center;
   }
   
@@ -547,10 +565,10 @@ body {
     margin-bottom: 50px;
   }
   
-  /* @media (max-width: 480px) {
+ /* @media (max-width: 480px) {
     .menu {
       padding-top: 20px;
-    
+    }
   
     .menu a {
       display: block;
@@ -561,9 +579,10 @@ body {
     }
   }  */
   .row {
-   display: flex;
-   flex-wrap: wrap;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
    justify-content: center;
+   grid-gap: 20px;
   }
 
 .imgs {
@@ -592,18 +611,16 @@ body {
     width: 44px;
     height: 44px;
     background: #eef7ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    place-self: center start;
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
-    margin-left: 120px;
+    margin-left: 80px;
   }
   
   .contact .info h4 {
     padding: 0px;
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 600px;
     margin-bottom: 5px;
     margin-left: 50px;
     color: #45505b;
@@ -612,7 +629,7 @@ body {
   .contact .info p {
     padding: 10px;
     margin-bottom: 0;
-    margin-left: 150px;
+    margin-left: 0px;
     font-size: 14px;
     color: #728394;
   }
@@ -628,13 +645,13 @@ body {
   .contact .info .phone:hover i {
     background: #483d8b;
     color: #fff;
-    margin-left: 50px;
+    margin-left: 30px;
   }
   
   .contact .php-email-form {
     width: 100%;
     background: #fff;
-    margin-left: 0px;
+    margin-left: 50px;
   }
   
   .contact .php-email-form .form-group {
@@ -698,7 +715,7 @@ body {
   .contact .php-email-form input[type=text],
   .contact .php-email-form input[type=email] {
     height: 44px;
-    margin-left: 50px;
+    margin-left: 0px;
   }
   
   .contact .php-email-form textarea {
@@ -751,7 +768,7 @@ body {
   }
   
   #footer p {
-    font-size: 15px;
+    font-size: 15;
     font-style: italic;
     padding: 0;
     margin: 0 0 40px 0;
